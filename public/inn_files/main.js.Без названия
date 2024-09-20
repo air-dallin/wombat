@@ -1,0 +1,292 @@
+const THEME_QUERY_NAME = 'bs-theme';
+const copyToClipboardBtn = $("button.copy-to-clipboard");
+const themeToggler = $("#toggleTheme");
+
+function getTheme() {
+    const theme = localStorage.getItem(THEME_QUERY_NAME) || '';
+    if (theme.length && ['dark', 'light'].includes(theme)) {
+        return theme;
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) {
+        return "dark";
+    } else {
+        return "light";
+    }
+}
+
+function getLanguage() {
+    return getCookieValue('django_language') || 'uz';
+}
+
+$(document).ready(function () {
+    $("form[data-target='set-language-form'] a").on('click', function (e) {
+        e.preventDefault();
+        const languageForm = $(this).closest('form[data-target="set-language-form"]');
+        languageForm.find("input[name='language']").val($(this).attr('data-language'));
+        languageForm.submit();
+    });
+});
+
+$(() => {
+    $(`a[data-og-name="nav-link"][href="${window.location.pathname}"]`).each(function () {
+        $(this).closest("li[class*='nav-item']").addClass("active");
+    });
+    $(`a[data-og-name="search-tab"][href^="${window.location.pathname}?"]`)
+        .addClass("text-success");
+});
+
+function arrayToDict(array) {
+    const dict = {};
+    array.forEach(item => {
+        dict[item.name] = item.value;
+    });
+    return dict;
+}
+
+const INTERNAL_SERVER_ERROR = {
+    'uz': "Xatolik yuz berdi!", 'ru': "Произошла ошибка!",
+}
+
+function getCookieValue(name) {
+    const cookies = document.cookie.split('; ');
+    for (let i = 0; i < cookies.length; i++) {
+        const [cookieName, cookieValue] = cookies[i].split('=');
+        if (cookieName === name) {
+            return decodeURIComponent(cookieValue);
+        }
+    }
+    return null;
+}
+
+getCSRFMiddleware = () => {
+    return {"X-CSRFToken": getCookieValue('csrftoken')}
+}
+emailConfirmedModalElement = document.getElementById('emailConfirmedModal');
+if (emailConfirmedModalElement) {
+    let emailConfirmedModal = new bootstrap.Modal(emailConfirmedModalElement);
+    emailConfirmedModal.show();
+    emailConfirmedModalElement.addEventListener("hide.bs.modal", () => {
+        emailConfirmedModalElement.remove();
+        emailConfirmedModal = null;
+    })
+}
+successfulPaymentModalElement = document.getElementById('successfulPaymentModal');
+if (successfulPaymentModalElement) {
+    let successfulPaymentModal = new bootstrap.Modal(successfulPaymentModalElement);
+    successfulPaymentModal.show();
+    successfulPaymentModalElement.addEventListener("hide.bs.modal", () => {
+        successfulPaymentModalElement.remove();
+        successfulPaymentModal = null;
+    })
+}
+
+// Form submission methods
+resetFormInsideModal = e => {
+    e.target.querySelector("form").querySelectorAll("input").forEach(input => {
+        input.classList.remove("is-valid", "is-invalid");
+    });
+}
+resetForm = form => {
+    form.find('input').removeClass("is-valid is-invalid");
+    form.find('.ajax-response').empty();
+}
+
+function toggleSubmitBtn(form) {
+    const btn = form.find(`button[type="submit"]`);
+    btn.toggleClass('disabled');
+    btn.find('.spinner-border').toggleClass('d-none');
+    btn.find('.btn-text').toggleClass('d-none');
+}
+
+function buildDangerAlert(text) {
+    if (Array.isArray(text)) {
+        text = text[0];
+    }
+    const outerDiv = $("<div>", {
+        class: 'alert alert-danger alert-dismissible fade show', role: 'alert',
+    });
+    outerDiv.append($("<strong>", {
+        text: text
+    }));
+    outerDiv.append($("<button>", {
+        type: 'button', class: 'btn-close', 'data-bs-dismiss': 'alert', 'aria-label': 'Close',
+
+    }));
+    return outerDiv;
+}
+
+handleFormSubmission = (event, form, ajaxKwargs, cleanFormData) => {
+    if (!cleanFormData) {
+        cleanFormData = data => {
+            return data
+        };
+    }
+    event.preventDefault();
+    resetForm(form);
+    const formData = cleanFormData(arrayToDict(form.serializeArray()));
+    $.ajax({
+        url: form.attr('action'), ...ajaxKwargs,
+        data: formData,
+        headers: {...getCSRFMiddleware()},
+        beforeSend: function () {
+            toggleSubmitBtn(form);
+        },
+        error: (xhr) => {
+            let errorMessage;
+            if (xhr.status === 401) {
+                errorMessage = xhr.responseJSON.detail;
+            } else if (xhr.status === 400) {
+                showErrorMessages(xhr.responseJSON, form);
+                if (xhr.responseJSON['non_field_errors']) {
+                    errorMessage = xhr.responseJSON['non_field_errors'];
+                }
+            } else {
+                const djangoLanguage = getLanguage();
+                errorMessage = INTERNAL_SERVER_ERROR[djangoLanguage];
+            }
+            if (errorMessage) {
+                form.find(".ajax-response").html(buildDangerAlert(errorMessage));
+            }
+        },
+        complete: () => {
+            toggleSubmitBtn(form);
+        }
+    });
+}
+
+showErrorMessages = (messages, form) => {
+    Object.keys(messages).forEach(item => {
+        const field = form.find(`input[name="${item}"]`);
+        if (field.length) {
+            field.addClass('is-invalid');
+            field.siblings('.invalid-feedback').empty();
+            messages[item].forEach(msg => {
+                field.siblings('.invalid-feedback').append($("<p>", {text: msg, class: "mb-0 lh-1"}));
+            })
+        }
+    });
+}
+
+function cleanCurrencyInput(inputValue) {
+    if (inputValue.length === 0) {
+        return ""
+    }
+    if (inputValue === '.') {
+        inputValue = "0.";
+    } else if (inputValue.length && inputValue.replaceAll('0', '') === '') {
+        inputValue = '0';
+    }
+    let cleanedValue = inputValue.replace(/[^0-9.]/g, '');
+    const decimalCount = cleanedValue.split('.').length - 1;
+    if (decimalCount > 1) {
+        const lastIndex = cleanedValue.lastIndexOf('.');
+        cleanedValue = cleanedValue.substring(0, lastIndex) + cleanedValue.substring(lastIndex + 1);
+    }
+    const parts = cleanedValue.split(".");
+    let formattedNumber = parseFloat(parts[0]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    let decimalPart = parts[1] || "";
+    if (cleanedValue.includes('.')) {
+        formattedNumber += "." + decimalPart
+    }
+    return formattedNumber;
+}
+
+$(() => {
+    $("input.currency").bind('input propertychange', function () {
+        $(this).val(cleanCurrencyInput($(this).val()));
+    });
+});
+
+
+// INFO MODAL
+const infoModalElement = document.getElementById('infoModal');
+const infoModal = new bootstrap.Modal(infoModalElement);
+infoModalElement.addEventListener('show.bs.modal', function (e) {
+    $(`div.modal[role="dialog"]`).map(function () {
+        $(this).addClass('z-1');
+    });
+});
+infoModalElement.addEventListener('hide.bs.modal', function (e) {
+    if (e.target.dataset['reloadOnClose'] === "true") {
+        location.reload();
+    } else {
+        $(this).find('div.modal-body').empty();
+        $(`div.modal[role="dialog"]`).map(function () {
+            $(this).removeClass('z-1');
+        });
+    }
+
+});
+
+$(() => {
+    copyToClipboardBtn.on('click', function (e) {
+        $(this).tooltip({'trigger': 'manual'});
+        const el = $($(this).attr("data-bs-target"));
+        navigator.clipboard.writeText(el.text() || el.val()).then(() => {
+            $(this).tooltip("show");
+            setTimeout(() => {
+                $(this).tooltip("hide");
+            }, 500);
+        })
+    });
+    $("button.print").on('click', function (e) {
+        $(".printable").printThis({
+            printDelay: 1000,
+            // loadCSS: '/static/css/print.css',
+            header: null,
+            footer: null,
+        });
+    });
+    $(`a[data-action="share"]`).on('click', function (e) {
+        shareBtnFunctions[$(this).attr('data-btn-name')]($("#shareInputValue").val());
+    })
+});
+
+const shareBtnFunctions = {
+    'telegram': shareOnTelegram,
+    'facebook': shareOnFacebook,
+    'twitter': shareOnTwitter,
+    'vk': shareOnVK,
+}
+
+function shareOnTelegram(uri) {
+    window.open('https://telegram.me/share/url?url=' + encodeURIComponent(uri),
+        'telegram-share-dialog',
+        'width=550,height=420'
+    );
+}
+
+function shareOnFacebook(uri) {
+    // Open the Facebook sharing dialog
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(uri),
+        'facebook-share-dialog',
+        'width=626,height=436'
+    );
+}
+
+function shareOnTwitter(uri) {
+    // Open the Twitter sharing dialog
+    window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(uri),
+        'twitter-share-dialog',
+        'width=550,height=420'
+    );
+}
+
+function shareOnVK(uri) {
+    // Open the VK sharing dialog
+    window.open('https://vk.com/share.php?url=' + encodeURIComponent(uri),
+        'vk-share-dialog',
+        'width=650,height=400'
+    );
+}
+
+$(() => {
+    if ($("div#yandex_rtb_R-A-2181612-3").length) {
+        window.yaContextCb.push(() => {
+            Ya.Context.AdvManager.render({
+                renderTo: 'yandex_rtb_R-A-2181612-3',
+                blockId: 'R-A-2181612-3'
+            })
+        });
+    }
+
+})

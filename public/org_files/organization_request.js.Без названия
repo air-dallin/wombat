@@ -1,0 +1,57 @@
+/*jshint esversion: 6 */
+const updateOrganizationForm = $(`form[name="updateOrganizationForm"]`);
+const updateOrganizationForm2 = $(`form[name="updateOrganizationForm2"]`);
+const addOrganizationForm = $(`form[name="addOrganizationForm"]`);
+const updateOrganizationModalElement = document.getElementById('updateOrganizationModal');
+const addOrganizationModalElement = document.getElementById('addOrganizationModal');
+
+function getAddUpdateOrgPrice() {
+    $.ajax({
+        url: '/api/organizations/request-price/',
+        headers: {...getCSRFMiddleware()},
+        dataType: 'json',
+        success: function (e) {
+            $(".update-organization-price").html(e['update_price']);
+            $(".add-organization-price").html(e['add_price']);
+        }
+    });
+}
+
+if (updateOrganizationModalElement) {
+    updateOrganizationModalElement.addEventListener('show.bs.modal', function () {
+        getAddUpdateOrgPrice();
+    });
+}
+if (addOrganizationModalElement) {
+    addOrganizationModalElement.addEventListener('show.bs.modal', function () {
+        getAddUpdateOrgPrice();
+    });
+}
+
+
+$(() => {
+    updateOrganizationForm.on('submit', function (e) {
+        handleFormSubmission(e, updateOrganizationForm, {
+            method: 'POST', dataType: 'json', success: r => {
+                $(infoModalElement).attr('data-reload-on-close', 'true').find('div.modal-body').html(r['html_response']);
+                infoModal.show();
+            }
+        });
+    });
+    updateOrganizationForm2.on('submit', function (e) {
+        handleFormSubmission(e, updateOrganizationForm2, {
+            method: 'POST', dataType: 'json', success: r => {
+                $(infoModalElement).attr('data-reload-on-close', 'true').find('div.modal-body').html(r['html_response']);
+                infoModal.show();
+            }
+        });
+    });
+    addOrganizationForm.on('submit', function (e) {
+        handleFormSubmission(e, addOrganizationForm, {
+            method: 'POST', dataType: 'json', success: r => {
+                $(infoModalElement).attr('data-reload-on-close', 'true').find('div.modal-body').html(r['html_response']);
+                infoModal.show();
+            }
+        })
+    });
+});

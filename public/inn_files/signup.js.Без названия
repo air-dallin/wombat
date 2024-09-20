@@ -1,0 +1,50 @@
+registerModal1Element = document.getElementById('registerModal1');
+registerModal2Element = document.getElementById('registerModal2');
+registerFinishModalElement = document.getElementById('registerFinishModal');
+const registerModal1 = new bootstrap.Modal(registerModal1Element);
+const registerModal2 = new bootstrap.Modal(registerModal2Element);
+const registerFinishModal = new bootstrap.Modal(registerFinishModalElement);
+const loginForm = $(`form[name="loginForm"]`);
+const registerForm1 = $(`form[name="registerForm1"]`);
+const registerForm2 = $(`form[name="registerForm2"]`);
+
+
+registerModal1Element.addEventListener('hidden.bs.modal', event => {
+    resetFormInsideModal(event);
+});
+registerModal2Element.addEventListener('hidden.bs.modal', event => {
+    resetFormInsideModal(event);
+});
+
+
+$(() => {
+    loginForm.on('submit', function (e) {
+        handleFormSubmission(e, loginForm, {
+            method: 'POST',
+            dataType: 'json',
+            success: () => {
+                location.reload();
+            }
+        })
+    });
+    registerForm1.on('submit', function (e) {
+        handleFormSubmission(e, registerForm1, {
+            method: 'POST',
+            dataType: 'json',
+            success: () => {
+                registerModal1.hide();
+                registerModal2.show();
+            },
+        })
+    });
+    registerForm2.on('submit', function (e) {
+        handleFormSubmission(e, registerForm2, {
+            method: 'POST',
+            dataType: 'json',
+            success: (response) => {
+                registerModal2.hide();
+                registerFinishModal.show();
+            }
+        });
+    });
+});

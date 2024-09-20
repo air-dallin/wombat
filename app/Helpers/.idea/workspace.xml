@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3b2533c-b321-4f62-9370-ee621019307a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Http/Traits/Statuses.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Http/Traits/Statuses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/lang/ru/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/lang/ru/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/views/frontend/profile/modules/guarant/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/views/frontend/profile/modules/guarant/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/views/frontend/profile/modules/guarant/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/views/frontend/profile/modules/guarant/view.blade.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2bU47uSwhDd4mMOiKwziGtFQ5lu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3b2533c-b321-4f62-9370-ee621019307a" name="Default Changelist" comment="" />
+      <created>1706256159618</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706256159618</updated>
+      <workItem from="1706256160949" duration="4000" />
+    </task>
+    <servers />
+  </component>
+</project>

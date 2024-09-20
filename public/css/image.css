@@ -1,0 +1,30 @@
+.remove-image{
+    visibility: hidden;
+    cursor: pointer;
+    position: absolute;
+    background: #ccc;
+    border-radius: 50%;
+    width: 24px;
+    padding-left: 8px;
+    height: 24px;
+}
+.remove-image:hover{
+    background:#f00;
+    color: #fff;
+}
+.preview-image{
+    padding: 10px;
+    margin: 5px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    float:left;
+}
+.preview-image:hover .remove-image{
+    visibility: visible;
+    z-index:1000;
+}
+
+.clearfix{
+    clear:both;
+}
+

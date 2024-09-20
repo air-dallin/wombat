@@ -1,0 +1,163 @@
+#calendar {
+    /*height: 100%;*/
+}
+
+.calendar {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    /*border: 1px solid #e0e0e0;*/
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 40px;
+}
+
+.calendar .header .month-year {
+    font-size: 20px;
+    font-weight: bold;
+    color: #636e73;
+    padding: 0 15px 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar .days {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.calendar .days .day_name {
+    width: calc(100% / 7);
+    text-align: center;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666;
+    padding: 10px;
+
+}
+
+.calendar .days .day_name:nth-child(7) {
+    border: none;
+}
+
+.calendar .days .day_num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-flow: column;
+    width: calc(100% / 7);
+    padding: 2px;
+    font-weight: bold;
+    color: #7c878d;
+}
+
+.calendar .days .day_num span {
+    display: inline-flex;
+    font-size: 14px;
+}
+
+.calendar .days .day_num .event {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #a3d161;
+    color: #fff;
+    word-wrap: break-word;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.calendar .days .day_num .event.old {
+    background-color: #e3e5e0;
+}
+
+.calendar .days .day_num .event-current {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #a3d161;
+    word-wrap: break-word;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    //cursor: pointer;
+}
+
+.calendar .days .day_num .event.green {
+    background-color: #51ce57;
+}
+
+.calendar .days .day_num .event.blue {
+    background-color: #518fce;
+}
+
+.calendar .days .day_num .event.red {
+    background-color: #ce5151;
+}
+
+.calendar .days .day_num:nth-child(7n+1) {
+    /*border-left: 1px solid #e6e9ea;*/
+}
+
+.calendar .days .day_num:hover {
+    background-color: #fdfdfd;
+}
+
+.calendar .days .day_num.ignore {
+    background-color: #fdfdfd;
+    color: #ced2d4;
+    cursor: inherit;
+}
+
+.month-year:first-child div {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #a3d161;
+}
+
+.month-year:last-child div {
+    display: flex;
+    align-items: center;
+}
+
+.month-year:last-child div span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.prevMonth {
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    .calendar {
+        padding: 20px;
+    }
+
+    .calendar .days .day_num {
+        padding: 5px;
+    }
+}

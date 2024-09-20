@@ -1,0 +1,568 @@
+{
+    "data": [
+        {
+            "name": "2",
+            "doctype": "002",
+            "signature": null,
+            "pid": 35586770,
+            "owner": 0,
+            "status": 0,
+            "doc_status": 0,
+            "updated": "2023-11-22 23:18:48",
+            "parties_owner": 1,
+            "partnerCompany": "\"TORO CONS\" MCHJ XK",
+            "partnerPhone": "998946942741",
+            "_id": "11EE8963944EE55A877562D11CF9BE99",
+            "doc_id": "11EE8963944EE55A877562D11CF9BE99",
+            "products": [
+                {
+                    "id": "",
+                    "ordno": 1,
+                    "lgotaid": null,
+                    "committentname": "",
+                    "committenttin": "",
+                    "committentvatregcode": "",
+                    "committentvatregstatus": null,
+                    "name": "описание",
+                    "catalogcode": "07318001005000000",
+                    "catalogname": "Саморезы и шурупы (всех форм и видов)",
+                    "marks": null,
+                    "barcode": "",
+                    "measureid": null,
+                    "packagecode": "1487591",
+                    "packagename": "килограмм",
+                    "count": "1",
+                    "summa": "30000",
+                    "deliverysum": "30000.00",
+                    "vatrate": "12",
+                    "vatsum": "3600.00",
+                    "exciserate": 0,
+                    "excisesum": 0,
+                    "deliverysumwithvat": "33600.00",
+                    "withoutvat": false,
+                    "withoutexcise": true,
+                    "warehouseid": null,
+                    "origin": 2,
+                    "lgotaname": null,
+                    "lgotavatsum": 0,
+                    "lgotatype": null
+                }
+            ],
+            "total_sum": 30000,
+            "total_delivery_sum": 30000,
+            "total_vat_sum": 3600,
+            "total_delivery_sum_with_vat": 33600,
+            "owner_name": "\"TORO CONS\" MCHJ XK",
+            "owner_tin": "310180911",
+            "type": "Счет-фактура без акта",
+            "contract_number": "2",
+            "contract_date": "2023-11-22",
+            "target_tins": [
+                {
+                    "tin": "309436114",
+                    "side": "buyer"
+                }
+            ],
+            "document_json": {
+                "didoxcontractid": "",
+                "version": 1,
+                "waybillids": [],
+                "hasmarking": false,
+                "facturatype": 0,
+                "productlist": {
+                    "hascommittent": false,
+                    "haslgota": false,
+                    "tin": "310180911",
+                    "hasexcise": false,
+                    "hasvat": true,
+                    "products": [
+                        {
+                            "id": "",
+                            "ordno": 1,
+                            "lgotaid": null,
+                            "committentname": "",
+                            "committenttin": "",
+                            "committentvatregcode": "",
+                            "committentvatregstatus": null,
+                            "name": "описание",
+                            "catalogcode": "07318001005000000",
+                            "catalogname": "Саморезы и шурупы (всех форм и видов)",
+                            "marks": null,
+                            "barcode": "",
+                            "measureid": null,
+                            "packagecode": "1487591",
+                            "packagename": "килограмм",
+                            "count": "1",
+                            "summa": "30000",
+                            "deliverysum": "30000.00",
+                            "vatrate": "12",
+                            "vatsum": "3600.00",
+                            "exciserate": 0,
+                            "excisesum": 0,
+                            "deliverysumwithvat": "33600.00",
+                            "withoutvat": false,
+                            "withoutexcise": true,
+                            "warehouseid": null,
+                            "origin": 2,
+                            "lgotaname": null,
+                            "lgotavatsum": 0,
+                            "lgotatype": null
+                        }
+                    ],
+                    "facturaproductid": "655e4607bb5ff1054c8d4578"
+                },
+                "facturadoc": {
+                    "facturano": "2",
+                    "facturadate": "2023-11-22"
+                },
+                "contractdoc": {
+                    "contractno": "2",
+                    "contractdate": "2023-11-22"
+                },
+                "contractid": null,
+                "lotid": "",
+                "oldfacturadoc": {
+                    "oldfacturadate": "",
+                    "oldfacturano": "",
+                    "oldfacturaid": ""
+                },
+                "sellertin": "310180911",
+                "seller": {
+                    "name": "\"TORO CONS\" MCHJ XK",
+                    "branchcode": "",
+                    "branchname": "",
+                    "vatregcode": "",
+                    "account": "20208000805608049001",
+                    "bankid": "00395",
+                    "address": "Абдулла Каххор МФЙ, Махмуд Тароби кучаси, 29а-уй  ",
+                    "director": "MUMINOV JAXONGIR XAKIMJANOVICH",
+                    "accountant": "",
+                    "vatregstatus": 20
+                },
+                "itemreleaseddoc": {
+                    "itemreleasedfio": ""
+                },
+                "buyertin": "309436114",
+                "buyer": {
+                    "name": "\"GROSSBOOK\" MCHJ",
+                    "branchcode": "",
+                    "branchname": "",
+                    "vatregcode": "",
+                    "account": "20208000905511949001",
+                    "bankid": "00974",
+                    "address": "Тошкент шаҳри, Олмазор тумани, Чангалзор Мавзук кўчаси, Уй 3  ",
+                    "director": "SAIDQULOV AVAZBEK BOTIRQUL O‘G‘LI",
+                    "accountant": "TAYIROV DONIYOR BOXODIR O‘G‘LI",
+                    "vatregstatus": null
+                },
+                "facturainvestmentobjectdoc": {
+                    "objectid": "",
+                    "objectname": ""
+                },
+                "facturaempowermentdoc": {
+                    "empowermentno": "",
+                    "empowermentdateofissue": "",
+                    "agentfio": "",
+                    "agenttin": "",
+                    "agentfacturaid": "655e4608bb5ff1054c8d4579"
+                },
+                "expansion": {
+                    "ordernumber": ""
+                },
+                "foreigncompany": {
+                    "countryid": "",
+                    "name": "",
+                    "address": "",
+                    "bank": "",
+                    "account": ""
+                },
+                "facturaid": "655e4607bb5ff1054c8d4577"
+            },
+            "doc_date": "2023-11-22",
+            "has_vat": true,
+            "pending_document": {
+                "id": 35586770,
+                "document_json":"{\"didoxcontractid\":\"\",\"version\":1,\"waybillids\":[],\"hasmarking\":false,\"facturatype\":0,\"productlist\":{\"hascommittent\":false,\"haslgota\":false,\"tin\":\"310180911\",\"hasexcise\":false,\"hasvat\":true,\"products\":[{\"id\":\"\",\"ordno\":1,\"lgotaid\":null,\"committentname\":\"\",\"committenttin\":\"\",\"committentvatregcode\":\"\",\"committentvatregstatus\":null,\"name\":\"\о\п\и\с\а\н\и\е\",\"catalogcode\":\"07318001005000000\",\"catalogname\":\"\С\а\м\о\р\е\з\ы \и \ш\у\р\у\п\ы (\в\с\е\х \ф\о\р\м \и \в\и\д\о\в)\",\"marks\":null,\"barcode\":\"\",\"measureid\":null,\"packagecode\":\"1487591\",\"packagename\":\"\к\и\л\о\г\р\а\м\м\",\"count\":\"1\",\"summa\":\"30000\",\"deliverysum\":\"30000.00\",\"vatrate\":\"12\",\"vatsum\":\"3600.00\",\"exciserate\":0,\"excisesum\":0,\"deliverysumwithvat\":\"33600.00\",\"withoutvat\":false,\"withoutexcise\":true,\"warehouseid\":null,\"origin\":2,\"lgotaname\":null,\"lgotavatsum\":0,\"lgotatype\":null}],\"facturaproductid\":\"655e4607bb5ff1054c8d4578\"},\"facturadoc\":{\"facturano\":\"2\",\"facturadate\":\"2023-11-22\"},\"contractdoc\":{\"contractno\":\"2\",\"contractdate\":\"2023-11-22\"},\"contractid\":null,\"lotid\":\"\",\"oldfacturadoc\":{\"oldfacturadate\":\"\",\"oldfacturano\":\"\",\"oldfacturaid\":\"\"},\"sellertin\":\"310180911\",\"seller\":{\"name\":\"\\\"TORO CONS\\\" MCHJ XK\",\"branchcode\":\"\",\"branchname\":\"\",\"vatregcode\":\"\",\"account\":\"20208000805608049001\",\"bankid\":\"00395\",\"address\":\"\А\б\д\у\л\л\а \К\а\х\х\о\р \М\Ф\Й, \М\а\х\м\у\д \Т\а\р\о\б\и \к\у\ч\а\с\и, 29\а-\у\й  \",\"director\":\"MUMINOV JAXONGIR XAKIMJANOVICH\",\"accountant\":\"\",\"vatregstatus\":20},\"itemreleaseddoc\":{\"itemreleasedfio\":\"\"},\"buyertin\":\"309436114\",\"buyer\":{\"name\":\"\\\"GROSSBOOK\\\" MCHJ\",\"branchcode\":\"\",\"branchname\":\"\",\"vatregcode\":\"\",\"account\":\"20208000905511949001\",\"bankid\":\"00974\",\"address\":\"\Т\о\ш\к\е\н\т \ш\а\ҳ\р\и, \О\л\м\а\з\о\р \т\у\м\а\н\и, \Ч\а\н\г\а\л\з\о\р \М\а\в\з\у\к \к\ў\ч\а\с\и, \У\й 3  \",\"director\":\"SAIDQULOV AVAZBEK BOTIRQUL O\‘G\‘LI\",\"accountant\":\"TAYIROV DONIYOR BOXODIR O\‘G\‘LI\",\"vatregstatus\":null},\"facturainvestmentobjectdoc\":{\"objectid\":\"\",\"objectname\":\"\"},\"facturaempowermentdoc\":{\"empowermentno\":\"\",\"empowermentdateofissue\":\"\",\"agentfio\":\"\",\"agenttin\":\"\",\"agentfacturaid\":\"655e4608bb5ff1054c8d4579\"},\"expansion\":{\"ordernumber\":\"\"},\"foreigncompany\":{\"countryid\":\"\",\"name\":\"\",\"address\":\"\",\"bank\":\"\",\"account\":\"\"},\"facturaid\":\"655e4607bb5ff1054c8d4577\"}",
+                "is_valid": 1,
+                "reverse_calc": null
+            }
+        },
+        {
+            "name": "2",
+            "doctype": "006",
+            "signature": "[{\"taxId\":\"310180911\",\"firstName\":\"JAXONGIR\",\"lastName\":\"MUMINOV\",\"company\":\"TORO CONS MCHJ\",\"email\":\"\",\"serial\":\"77e52876\",\"signingTime\":\"2023.11.22 23:09:59\",\"pinfl\":null}]",
+            "pid": 35586768,
+            "owner": 0,
+            "status": 6,
+            "doc_status": 60,
+            "updated": "2023-11-22 23:10:03",
+            "parties_owner": 1,
+            "partnerCompany": "\"TORO CONS\" MCHJ XK",
+            "partnerPhone": "998946942741",
+            "_id": "11EE896257D72F8E8D2962D11CF9BE99",
+            "doc_id": "11EE896257D72F8E8D2962D11CF9BE99",
+            "products": [
+                {
+                    "ordno": 1,
+                    "catalogcode": "10609001001000000",
+                    "catalogname": "Бухгалтерские услуги",
+                    "name": "услуги бух учета",
+                    "measureid": "1",
+                    "count": "1"
+                }
+            ],
+            "total_sum": 0,
+            "total_delivery_sum": 0,
+            "total_vat_sum": 0,
+            "total_delivery_sum_with_vat": 0,
+            "owner_name": "\"GROSSBOOK\" MCHJ",
+            "owner_tin": "309436114",
+            "type": "Доверенность",
+            "contract_number": "2",
+            "contract_date": "2023-11-22",
+            "target_tins": [
+                {
+                    "tin": "310180911",
+                    "side": "buyer"
+                },
+                {
+                    "tin": "32204920211222",
+                    "side": "agent"
+                }
+            ],
+            "document_json": {
+                "empowermentdoc": {
+                    "empowermentno": "2",
+                    "empowermentdateofissue": "2023-11-22",
+                    "empowermentdateofexpire": "2023-11-30"
+                },
+                "contractdoc": {
+                    "contractno": "2",
+                    "contractdate": "2023-11-22"
+                },
+                "agent": {
+                    "jobtitle": null,
+                    "fio": "AXMETSHIN ILMIR RENATOVICH",
+                    "passport": {
+                        "number": null,
+                        "issuedby": null,
+                        "dateofissue": null
+                    },
+                    "agenttin": "32204920211222",
+                    "agentempowermentid": "655e43f4bb5ff1054c8d4569"
+                },
+                "sellertin": "309436114",
+                "seller": {
+                    "name": "\"GROSSBOOK\" MCHJ",
+                    "branchcode": "",
+                    "branchname": "",
+                    "account": "20208000905511949001",
+                    "bankid": "00974",
+                    "address": "Тошкент шаҳри, Олмазор тумани, Чангалзор Мавзук кўчаси, Уй 3  ",
+                    "director": "SAIDQULOV AVAZBEK BOTIRQUL O‘G‘LI",
+                    "accountant": "TAYIROV DONIYOR BOXODIR O‘G‘LI"
+                },
+                "buyertin": "310180911",
+                "productlist": {
+                    "tin": "310180911",
+                    "hasexcise": false,
+                    "hasvat": true,
+                    "products": [
+                        {
+                            "ordno": 1,
+                            "catalogcode": "10609001001000000",
+                            "catalogname": "Бухгалтерские услуги",
+                            "name": "услуги бух учета",
+                            "measureid": "1",
+                            "count": "1"
+                        }
+                    ],
+                    "empowermentproductid": "655e43f4bb5ff1054c8d456a"
+                },
+                "buyer": {
+                    "name": "\"TORO CONS\" MCHJ XK",
+                    "branchcode": "",
+                    "branchname": "",
+                    "account": "20208000805608049001",
+                    "bankid": "00395",
+                    "address": "Абдулла Каххор МФЙ, Махмуд Тароби кучаси, 29а-уй  ",
+                    "director": "MUMINOV JAXONGIR XAKIMJANOVICH",
+                    "accountant": ""
+                },
+                "empowermentid": "655e43f4bb5ff1054c8d4568"
+            },
+            "doc_date": "2023-11-22",
+            "has_vat": true,
+            "pending_document": {
+                "id": 35586768,
+                "document_json":"{\"empowermentdoc\":{\"empowermentno\":\"2\",\"empowermentdateofissue\":\"2023-11-22\",\"empowermentdateofexpire\":\"2023-11-30\"},\"contractdoc\":{\"contractno\":\"2\",\"contractdate\":\"2023-11-22\"},\"agent\":{\"jobtitle\":null,\"fio\":\"AXMETSHIN ILMIR RENATOVICH\",\"passport\":{\"number\":null,\"issuedby\":null,\"dateofissue\":null},\"agenttin\":\"32204920211222\",\"agentempowermentid\":\"655e43f4bb5ff1054c8d4569\"},\"sellertin\":\"309436114\",\"seller\":{\"name\":\"\\\"GROSSBOOK\\\" MCHJ\",\"branchcode\":\"\",\"branchname\":\"\",\"account\":\"20208000905511949001\",\"bankid\":\"00974\",\"address\":\"\Т\о\ш\к\е\н\т \ш\а\ҳ\р\и, \О\л\м\а\з\о\р \т\у\м\а\н\и, \Ч\а\н\г\а\л\з\о\р \М\а\в\з\у\к \к\ў\ч\а\с\и, \У\й 3  \",\"director\":\"SAIDQULOV AVAZBEK BOTIRQUL O\‘G\‘LI\",\"accountant\":\"TAYIROV DONIYOR BOXODIR O\‘G\‘LI\"},\"buyertin\":\"310180911\",\"productlist\":{\"tin\":\"310180911\",\"hasexcise\":false,\"hasvat\":true,\"products\":[{\"ordno\":1,\"catalogcode\":\"10609001001000000\",\"catalogname\":\"\Б\у\х\г\а\л\т\е\р\с\к\и\е \у\с\л\у\г\и\",\"name\":\"\у\с\л\у\г\и \б\у\х \у\ч\е\т\а\",\"measureid\":\"1\",\"count\":\"1\"}],\"empowermentproductid\":\"655e43f4bb5ff1054c8d456a\"},\"buyer\":{\"name\":\"\\\"TORO CONS\\\" MCHJ XK\",\"branchcode\":\"\",\"branchname\":\"\",\"account\":\"20208000805608049001\",\"bankid\":\"00395\",\"address\":\"\А\б\д\у\л\л\а \К\а\х\х\о\р \М\Ф\Й, \М\а\х\м\у\д \Т\а\р\о\б\и \к\у\ч\а\с\и, 29\а-\у\й  \",\"director\":\"MUMINOV JAXONGIR XAKIMJANOVICH\",\"accountant\":\"\"},\"empowermentid\":\"655e43f4bb5ff1054c8d4568\"}",
+                "is_valid": 1,
+                "reverse_calc": null
+            }
+        },
+        {
+            "name": "Договор 2",
+            "doctype": "007",
+            "signature": "[{\"taxId\":\"310180911\",\"firstName\":\"JAXONGIR\",\"lastName\":\"MUMINOV\",\"company\":\"TORO CONS MCHJ\",\"email\":\"\",\"serial\":\"77e52876\",\"signingTime\":\"2023.11.20 09:50:16\",\"pinfl\":null},{\"taxId\":\"309436114\",\"firstName\":\"AZAMATXON\",\"lastName\":\"MAXSUMXONOV\",\"company\":\"GROSSBOOK MCHJ\",\"email\":\"\",\"serial\":\"77b43ef8\",\"signingTime\":\"2023.11.20 09:54:37\",\"pinfl\":null}]",
+            "pid": 35586200,
+            "owner": 0,
+            "status": 3,
+            "doc_status": 3,
+            "updated": "2023-11-20 09:54:41",
+            "parties_owner": 1,
+            "partnerCompany": "\"TORO CONS\" MCHJ XK",
+            "partnerPhone": "998946942741",
+            "_id": "11EE8760467D229285E362D11CF9BE99",
+            "doc_id": "11EE8760467D229285E362D11CF9BE99",
+            "products": [
+                {
+                    "ordno": 1,
+                    "name": "Гипсокартон",
+                    "catalogcode": "06809001002000000",
+                    "catalogname": "Гипсокартон",
+                    "barcode": "",
+                    "measureid": null,
+                    "packagecode": "201045",
+                    "packagename": "кв. метр",
+                    "count": "10",
+                    "summa": "45000",
+                    "deliverysum": "450000.00",
+                    "vatrate": 0,
+                    "vatsum": 0,
+                    "exciserate": 0,
+                    "excisesum": 0,
+                    "deliverysumwithvat": "450000.00",
+                    "withoutvat": true
+                }
+            ],
+            "total_sum": 45000,
+            "total_delivery_sum": 450000,
+            "total_vat_sum": 0,
+            "total_delivery_sum_with_vat": 450000,
+            "owner_name": "\"TORO CONS\" MCHJ XK",
+            "owner_tin": "310180911",
+            "type": "Not type",
+            "contract_number": "2",
+            "contract_date": "2023-11-20",
+            "target_tins": [
+                {
+                    "tin": null,
+                    "side": "buyer"
+                }
+            ],
+            "document_json": {
+                "didoxorderid": "",
+                "contractdoc": {
+                    "contractname": "Договор 2",
+                    "contractno": "2",
+                    "contractdate": "2023-11-20",
+                    "contractexpiredate": "2023-11-24",
+                    "contractplace": "2"
+                },
+                "owner": {
+                    "tin": "310180911",
+                    "name": "\"TORO CONS\" MCHJ XK",
+                    "branchcode": "",
+                    "branchname": "",
+                    "fiztin": "32204920211222",
+                    "fio": "MUMINOV JAXONGIR XAKIMJANOVICH",
+                    "address": "Абдулла Каххор МФЙ, Махмуд Тароби кучаси, 29а-уй  ",
+                    "workphone": "998946942741",
+                    "mobile": "998946942741",
+                    "oked": "41202",
+                    "account": "20208000805608049001",
+                    "bankid": "00395"
+                },
+                "clients": [
+                    {
+                        "branchcode": "",
+                        "branchname": "",
+                        "tin": "309436114",
+                        "name": "\"GROSSBOOK\" MCHJ",
+                        "fiztin": "51406006480039",
+                        "fio": "SAIDQULOV AVAZBEK BOTIRQUL O‘G‘LI",
+                        "address": "Тошкент шаҳри, Олмазор тумани, Чангалзор Мавзук кўчаси, Уй 3  ",
+                        "workphone": "",
+                        "mobile": "",
+                        "oked": "69201",
+                        "account": "20208000905511949001",
+                        "bankid": "00974"
+                    }
+                ],
+                "parts": [
+                    {
+                        "ordno": 1,
+                        "title": "Гипоскартон",
+                        "body": "Текст договора гипсокартон"
+                    }
+                ],
+                "products": [
+                    {
+                        "ordno": 1,
+                        "name": "Гипсокартон",
+                        "catalogcode": "06809001002000000",
+                        "catalogname": "Гипсокартон",
+                        "barcode": "",
+                        "measureid": null,
+                        "packagecode": "201045",
+                        "packagename": "кв. метр",
+                        "count": "10",
+                        "summa": "45000",
+                        "deliverysum": "450000.00",
+                        "vatrate": 0,
+                        "vatsum": 0,
+                        "exciserate": 0,
+                        "excisesum": 0,
+                        "deliverysumwithvat": "450000.00",
+                        "withoutvat": true
+                    }
+                ],
+                "hasvat": false,
+                "contractid": "655ae57e3656d5de91c7678e",
+                "sellertin": "310180911",
+                "buyertin": null
+            },
+            "doc_date": "2023-11-20",
+            "has_vat": false,
+            "pending_document": {
+                "id": 35586200,
+                "document_json":"{\"didoxorderid\":\"\",\"contractdoc\":{\"contractname\":\"\Д\о\г\о\в\о\р 2\",\"contractno\":\"2\",\"contractdate\":\"2023-11-20\",\"contractexpiredate\":\"2023-11-24\",\"contractplace\":\"2\"},\"owner\":{\"tin\":\"310180911\",\"name\":\"\\\"TORO CONS\\\" MCHJ XK\",\"branchcode\":\"\",\"branchname\":\"\",\"fiztin\":\"32204920211222\",\"fio\":\"MUMINOV JAXONGIR XAKIMJANOVICH\",\"address\":\"\А\б\д\у\л\л\а \К\а\х\х\о\р \М\Ф\Й, \М\а\х\м\у\д \Т\а\р\о\б\и \к\у\ч\а\с\и, 29\а-\у\й  \",\"workphone\":\"998946942741\",\"mobile\":\"998946942741\",\"oked\":\"41202\",\"account\":\"20208000805608049001\",\"bankid\":\"00395\"},\"clients\":[{\"branchcode\":\"\",\"branchname\":\"\",\"tin\":\"309436114\",\"name\":\"\\\"GROSSBOOK\\\" MCHJ\",\"fiztin\":\"51406006480039\",\"fio\":\"SAIDQULOV AVAZBEK BOTIRQUL O\‘G\‘LI\",\"address\":\"\Т\о\ш\к\е\н\т \ш\а\ҳ\р\и, \О\л\м\а\з\о\р \т\у\м\а\н\и, \Ч\а\н\г\а\л\з\о\р \М\а\в\з\у\к \к\ў\ч\а\с\и, \У\й 3  \",\"workphone\":\"\",\"mobile\":\"\",\"oked\":\"69201\",\"account\":\"20208000905511949001\",\"bankid\":\"00974\"}],\"parts\":[{\"ordno\":1,\"title\":\"\Г\и\п\о\с\к\а\р\т\о\н\",\"body\":\"\Т\е\к\с\т \д\о\г\о\в\о\р\а \г\и\п\с\о\к\а\р\т\о\н\"}],\"products\":[{\"ordno\":1,\"name\":\"\Г\и\п\с\о\к\а\р\т\о\н\",\"catalogcode\":\"06809001002000000\",\"catalogname\":\"\Г\и\п\с\о\к\а\р\т\о\н\",\"barcode\":\"\",\"measureid\":null,\"packagecode\":\"201045\",\"packagename\":\"\к\в. \м\е\т\р\",\"count\":\"10\",\"summa\":\"45000\",\"deliverysum\":\"450000.00\",\"vatrate\":0,\"vatsum\":0,\"exciserate\":0,\"excisesum\":0,\"deliverysumwithvat\":\"450000.00\",\"withoutvat\":true}],\"hasvat\":false,\"contractid\":\"655ae57e3656d5de91c7678e\",\"sellertin\":\"310180911\",\"buyertin\":null}",
+                "is_valid": 1,
+                "reverse_calc": null
+            }
+        },
+        {
+            "name": "1",
+            "doctype": "007",
+            "signature": "[{\"taxId\":\"310180911\",\"firstName\":\"JAXONGIR\",\"lastName\":\"MUMINOV\",\"company\":\"TORO CONS MCHJ\",\"email\":\"\",\"serial\":\"77e52876\",\"signingTime\":\"2023.11.20 09:46:32\",\"pinfl\":null}]",
+            "pid": 35586198,
+            "owner": 0,
+            "status": 1,
+            "doc_status": 2,
+            "updated": "2023-11-20 09:46:21",
+            "parties_owner": 1,
+            "partnerCompany": "\"TORO CONS\" MCHJ XK",
+            "partnerPhone": "998946942741",
+            "_id": "11EE875FC04EE598B42362D11CF9BE99",
+            "doc_id": "11EE875FC04EE598B42362D11CF9BE99",
+            "products": [
+                {
+                    "ordno": 1,
+                    "name": "Саморезы",
+                    "catalogcode": "07318001005000000",
+                    "catalogname": "Саморезы и шурупы (всех форм и видов)",
+                    "barcode": "",
+                    "measureid": null,
+                    "packagecode": "1487591",
+                    "packagename": "килограмм",
+                    "count": "20",
+                    "summa": "250000",
+                    "deliverysum": "5000000.00",
+                    "vatrate": 0,
+                    "vatsum": 0,
+                    "exciserate": 0,
+                    "excisesum": 0,
+                    "deliverysumwithvat": "5000000.00",
+                    "withoutvat": true
+                }
+            ],
+            "total_sum": 250000,
+            "total_delivery_sum": 5000000,
+            "total_vat_sum": 0,
+            "total_delivery_sum_with_vat": 5000000,
+            "owner_name": "\"TORO CONS\" MCHJ XK",
+            "owner_tin": "310180911",
+            "type": "Not type",
+            "contract_number": "1",
+            "contract_date": "2023-11-20",
+            "target_tins": [
+                {
+                    "tin": null,
+                    "side": "buyer"
+                }
+            ],
+            "document_json": {
+                "didoxorderid": "",
+                "contractdoc": {
+                    "contractname": "1",
+                    "contractno": "1",
+                    "contractdate": "2023-11-20",
+                    "contractexpiredate": "2023-11-30",
+                    "contractplace": "1"
+                },
+                "owner": {
+                    "tin": "310180911",
+                    "name": "\"TORO CONS\" MCHJ XK",
+                    "branchcode": "",
+                    "branchname": "",
+                    "fiztin": "32204920211222",
+                    "fio": "MUMINOV JAXONGIR XAKIMJANOVICH",
+                    "address": "Абдулла Каххор МФЙ, Махмуд Тароби кучаси, 29а-уй  ",
+                    "workphone": "998946942741",
+                    "mobile": "998946942741",
+                    "oked": "41202",
+                    "account": "20208000805608049001",
+                    "bankid": "00395"
+                },
+                "clients": [
+                    {
+                        "branchcode": "",
+                        "branchname": "",
+                        "tin": "309436114",
+                        "name": "\"GROSSBOOK\" MCHJ",
+                        "fiztin": "51406006480039",
+                        "fio": "SAIDQULOV AVAZBEK BOTIRQUL O‘G‘LI",
+                        "address": "Тошкент шаҳри, Олмазор тумани, Чангалзор Мавзук кўчаси, Уй 3  ",
+                        "workphone": "",
+                        "mobile": "",
+                        "oked": "69201",
+                        "account": "20208000905511949001",
+                        "bankid": "00974"
+                    }
+                ],
+                "parts": [
+                    {
+                        "ordno": 1,
+                        "title": "Заголовок договора",
+                        "body": "Текст договора"
+                    }
+                ],
+                "products": [
+                    {
+                        "ordno": 1,
+                        "name": "Саморезы",
+                        "catalogcode": "07318001005000000",
+                        "catalogname": "Саморезы и шурупы (всех форм и видов)",
+                        "barcode": "",
+                        "measureid": null,
+                        "packagecode": "1487591",
+                        "packagename": "килограмм",
+                        "count": "20",
+                        "summa": "250000",
+                        "deliverysum": "5000000.00",
+                        "vatrate": 0,
+                        "vatsum": 0,
+                        "exciserate": 0,
+                        "excisesum": 0,
+                        "deliverysumwithvat": "5000000.00",
+                        "withoutvat": true
+                    }
+                ],
+                "hasvat": false,
+                "contractid": "655ae49d3656d5de91c7677b",
+                "sellertin": "310180911",
+                "buyertin": null
+            },
+            "doc_date": "2023-11-20",
+            "has_vat": false,
+            "pending_document": {
+                "id": 35586198,
+                "document_json":"{\"didoxorderid\":\"\",\"contractdoc\":{\"contractname\":\"1\",\"contractno\":\"1\",\"contractdate\":\"2023-11-20\",\"contractexpiredate\":\"2023-11-30\",\"contractplace\":\"1\"},\"owner\":{\"tin\":\"310180911\",\"name\":\"\\\"TORO CONS\\\" MCHJ XK\",\"branchcode\":\"\",\"branchname\":\"\",\"fiztin\":\"32204920211222\",\"fio\":\"MUMINOV JAXONGIR XAKIMJANOVICH\",\"address\":\"\А\б\д\у\л\л\а \К\а\х\х\о\р \М\Ф\Й, \М\а\х\м\у\д \Т\а\р\о\б\и \к\у\ч\а\с\и, 29\а-\у\й  \",\"workphone\":\"998946942741\",\"mobile\":\"998946942741\",\"oked\":\"41202\",\"account\":\"20208000805608049001\",\"bankid\":\"00395\"},\"clients\":[{\"branchcode\":\"\",\"branchname\":\"\",\"tin\":\"309436114\",\"name\":\"\\\"GROSSBOOK\\\" MCHJ\",\"fiztin\":\"51406006480039\",\"fio\":\"SAIDQULOV AVAZBEK BOTIRQUL O\‘G\‘LI\",\"address\":\"\Т\о\ш\к\е\н\т \ш\а\ҳ\р\и, \О\л\м\а\з\о\р \т\у\м\а\н\и, \Ч\а\н\г\а\л\з\о\р \М\а\в\з\у\к \к\ў\ч\а\с\и, \У\й 3  \",\"workphone\":\"\",\"mobile\":\"\",\"oked\":\"69201\",\"account\":\"20208000905511949001\",\"bankid\":\"00974\"}],\"parts\":[{\"ordno\":1,\"title\":\"\З\а\г\о\л\о\в\о\к \д\о\г\о\в\о\р\а\",\"body\":\"\Т\е\к\с\т \д\о\г\о\в\о\р\а\"}],\"products\":[{\"ordno\":1,\"name\":\"\С\а\м\о\р\е\з\ы\",\"catalogcode\":\"07318001005000000\",\"catalogname\":\"\С\а\м\о\р\е\з\ы \и \ш\у\р\у\п\ы (\в\с\е\х \ф\о\р\м \и \в\и\д\о\в)\",\"barcode\":\"\",\"measureid\":null,\"packagecode\":\"1487591\",\"packagename\":\"\к\и\л\о\г\р\а\м\м\",\"count\":\"20\",\"summa\":\"250000\",\"deliverysum\":\"5000000.00\",\"vatrate\":0,\"vatsum\":0,\"exciserate\":0,\"excisesum\":0,\"deliverysumwithvat\":\"5000000.00\",\"withoutvat\":true}],\"hasvat\":false,\"contractid\":\"655ae49d3656d5de91c7677b\",\"sellertin\":\"310180911\",\"buyertin\":null}",
+                "is_valid": 1,
+                "reverse_calc": null
+            }
+        }
+    ],
+    "total": 4,
+    "next_page_url": null
+}
